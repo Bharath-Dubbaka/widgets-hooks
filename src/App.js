@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
+import React, { useState } from "react";
+// import Accordion from "./components/Accordion";
+// import WikiSearch from "./components/WikiSearch";
+import Dropdown from "./components/Dropdown";
+import Translate from "./components/Translate";
+
+const items = [
+  {
+    title: "One Lorem",
+    content:
+      "OneLorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, blanditiis excepturi alias debitis, similique magnam quae necessitatibus enim hic doloremque nemo repellendus voluptates doloribus dignissimos sapiente, facere odit a temporibus?",
+  },
+  {
+    title: "Two Lorem",
+    content:
+      "TwoLorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, blanditiis excepturi alias debitis, similique magnam quae necessitatibus enim hic doloremque nemo repellendus voluptates doloribus dignissimos sapiente, facere odit a temporibus?",
+  },
+  {
+    title: "Three Lorem",
+    content:
+      "ThreeLorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, blanditiis excepturi alias debitis, similique magnam quae necessitatibus enim hic doloremque nemo repellendus voluptates doloribus dignissimos sapiente, facere odit a temporibus?",
+  },
+];
+
+const options = [
+  { label: "Color Red", value: "red" },
+  { label: "Color Green", value: "green" },
+  { label: "Color Blue", value: "blue" },
+];
 
 function App() {
+  // const { items, setItems } = useState(itemsData);
+  const [selected, setSelected] = useState(options[0]);
+  // console.log("object", options[0]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Accordion items={items} /> */}
+      {/* <WikiSearch/> */}
+      {/* <Dropdown
+      label='Select a Color'
+        selected={selected}
+        setSelected={setSelected}
+        options={options}
+      /> */}
+      <Translate />
     </div>
   );
 }
